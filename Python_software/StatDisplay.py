@@ -1,6 +1,6 @@
-#open hardware monitor must be running for this program to work!
+# open hardware monitor must be running for this program to work!
 import math
-import socket
+
 import time
 import wmi
 import serial
@@ -8,12 +8,10 @@ import serial
 arduino = serial.Serial('COM6', 9600, timeout=.1)
 w = wmi.WMI(namespace="root\OpenHardwareMonitor")
 
-local_ip = socket.gethostbyname(socket.gethostname())
-
 gpuLoad = 0
 cpuLoad = 0
 gpuTemp = 0
-cpuLoad = 0
+cpuTemp = 0
 ramPerc = 0
 ramLoad = 0
 
